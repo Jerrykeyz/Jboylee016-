@@ -3,26 +3,29 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Navigation</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style(2).css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="font awesome/css/all.css">
 </head>
 <body>
-    <nav>
-        <h1><a href="" title=" Back To Home page">AYOMIDE</a></h1>
-        <div class="navigation">
-            <span id="bars"><i class="fa-solid fa-bars"></i></span>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Home -->
+    <section class="header">
+        <nav>
+            <h1>AYOMIDE</h1>
+            <div class="navigation" id="navbar">
+                <i class="fa fa-times" onclick="hide()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="show()"></i>
+        </nav>
+    </section>
+    <!-- Home--AREA -->
     <section id="home-area">
         <h1 style="font-size:2.2rem;letter-spacing: 1px; color:white">I'm a <span style="color:orange; font-family:calibri">Web Developer</span> based in Nigeria</h1>
         <p style="color:white; font-size:0.9rem; width:50%; line-height:25px">I have worked for various company like google, Youtube Chat GPT and the like. I happen to have a very vase knowledge in this area and i believe i will be of great help to anyone who hires me. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit repellendus cum, exercitationem enim, labore quam iste modi perspiciatis ipsa excepturi rerum quod a ducimus omnis adipisci voluptatum odio corrupti.</p>
@@ -31,7 +34,6 @@
             <a class="yellow" href="">Contact Me</a>
         </div>
     </section>
-    <!-- RESUME -->
     <section id="resume">
         <h1 style="color:#ffa500;">My Acheivement</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita beatae aut earum ad vitae, facilis consectetur tenetur eos animi! Impedit vel consectetur totam esse distinctio. Voluptatum minus et id inventore.</p>
@@ -74,12 +76,7 @@
             </div> 
         </div>   
     </section>
-    <div class="java">
-        <p>If you find this website captivating pls hit the Click me button</p>
-        <p id="clicked"></p>
-        <button class="but" onclick="Click()">Click me</button>
-    </div>
-            <!-- SERVICE AREA  -->
+    <!-- SERVICE AREA  -->
     <section id="services">
         <h1>Services</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias nesciunt facilis eligendi aliquam, fugit aut itaque ratione quo corrupti eum architecto maiores illum, corporis aliquid expedita quos. Quibusdam, voluptatum?</p>
@@ -137,129 +134,74 @@
                         </div>
         </div>
     </section>
-        <!-- My PROJECT -->
-    <section id="Project">
+     <!-- My PROJECT -->
+     <section id="Project">
         <h1>Projects</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem blanditiis laborum ipsum porro dolorem, obcaecati eius necessitatibus suscipit architecto illo similique impedit? Ipsam enim voluptatem voluptates corrupti reiciendis eaque animi.</p>
         <h2 style="text-align:center">Lightbox</h2>
-            <div class="row">
+        <div class="row">
             <div class="column">
-                <img src="./Hair cut.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="./responsive.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+              <img src="responsive.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
             </div>
             <div class="column">
-                <img src="./youtube.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+              <img src="Hair cut.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
             </div>
             <div class="column">
-                <img src="./How to make money.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+              <img src="youtube.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
             </div>
+            <div class="column">
+              <img src="How to make money.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
             </div>
-
-            <div id="myModal" class="modal">
+          </div>
+          
+          <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
-
-                <div class="mySlides">
+          
+              <div class="mySlides">
                 <div class="numbertext">1 / 4</div>
-                <img src="./Hair cut.png" style="width:100%">
-                </div>
-
-                <div class="mySlides">
+                <img src="responsive.png" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
                 <div class="numbertext">2 / 4</div>
-                <img src="./responsive.png" style="width:100%">
-                </div>
-
-                <div class="mySlides">
+                <img src="Hair cut.png" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
                 <div class="numbertext">3 / 4</div>
-                <img src="./youtube.png" style="width:100%">
-                </div>
-                
-                <div class="mySlides">
+                <img src="youtube.png" style="width:100%">
+              </div>
+              
+              <div class="mySlides">
                 <div class="numbertext">4 / 4</div>
-                <img src="./How to make money.png" style="width:100%">
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <div class="caption-container">
+                <img src="How to make money.png" style="width:100%">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+              <div class="caption-container">
                 <p id="caption"></p>
-                </div>
-
-
-                <div class="column">
-                <img class="demo cursor" src="./Hair cut.png" style="width:100%" onclick="currentSlide(1)" alt="Hair cut">
-                </div>
-                <div class="column">
-                <img class="demo cursor" src="./responsive.png" style="width:100%" onclick="currentSlide(2)" alt="Responsive image">
-                </div>
-                <div class="column">
-                <img class="demo cursor" src="./youtube.png" style="width:100%" onclick="currentSlide(3)" alt="Youtube clone">
-                </div>
-                <div class="column">
-                <img class="demo cursor" src="./How to make money.png" style="width:100%" onclick="currentSlide(4)" alt="typical webpage">
-                </div>
+              </div>
+          
+          
+              <div class="column">
+                <img class="demo cursor" src="./responsive.png" style="width:100%" onclick="currentSlide(1)" alt="Responsive IMG">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="Hair cut.png" style="width:100%" onclick="currentSlide(2)" alt="Hair Cut IMG">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="youtube.png" style="width:100%" onclick="currentSlide(3)" alt="Youtube Clone IMG">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./How to make money.png" style="width:100%" onclick="currentSlide(4)" alt="Image">
+              </div>
             </div>
-            </div>
-    </section>
-
-    <!-- BLOG-AREA -->
-     <!-- Do not mind the class name i used in this area -->
-    <section id="blog">
-        <h1>My Blog</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum nam reiciendis harum vero iusto distinctio nihil, temporibus voluptas rerum magnam. Eligendi animi nesciunt dicta delectus facilis deleniti expedita suscipit odit.</p>
-        <div class="pic">
-                <div class="img1 img">
-                    <img src="./youtube.png" alt="Image of Image"><br><br>
-                    <span class="info">
-                        <span class="col">June 21, 2019  admin <i class="fas fa-message"></i></span>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo sequi eius quas saepe inventore tempore beatae dicta reprehenderit ut quod? Obcaecati magni ullam, voluptatem enim at perferendis tempore assumenda repudiandae.</p>
-                    </span>
-                </div>
-                <div class="img2 img">
-                    <img src="./responsive.png" alt="Image of Image"><br><br>
-                    <span class="info">
-                        <span class="col">June 22, 2019  admin <i class="fas fa-message"></i></span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut optio quod veritatis architecto? Sequi, minus at tempore pariatur animi labore fugiat? Cum voluptatibus debitis architecto, temporibus iusto aperiam ipsam laboriosam.</p>
-                    </span>
-                </div>
-                <div class="img3 img">
-                    <img src="./Hair cut.png" alt="Image of Image"><br><br>
-                    <span class="info">
-                        <span class="col">June 21, 2019  admin <i class="fas fa-message"></i></span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione praesentium, explicabo incidunt maiores aspernatur voluptatibus nisi? Quam delectus nostrum tempora molestiae, aut magnam et vero similique hic voluptate reiciendis ad.</p>
-                    </span>
-                </div>
-        </div>
-    </section>
-    <div class="box10">
-        <div class="yeah">
-            <span class="hun">100</span>
-            <h3>Awards</h3>
-        </div>
-        <div class="okay">
-            <span class="hun">1200</span>
-            <h3>Complete Project</h3>
-        </div>
-        <div class="over">
-            <span class="hun">1200</span>
-            <h3>Happy Customer</h3>
-        </div>
-    </div>
-
-    <!-- Transfer-area -->
-    <section id="transfer">
-            <h1 style="font-size:2.2rem;letter-spacing: 1px; color:white">I'm <span style="color:orange">Available</span> for Freelancing</h1>
-            <p style="color:white; font-size:0.9rem; width:50%; line-height:25px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae pariatur impedit repellat incidunt minus sequi, voluptas at numquam distinctio voluptatum, eius velit voluptatem consectetur libero officiis delectus omnis quod?</p>
-            <div style="margin-top:40px">
-                <a  href="">Hire Me</a>
-            </div>
-    </section>
-
+          </div>
     <!-- Contact-Area -->
-     <section id="contact">
+    <section id="contact">
         <h1>Contact Us</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime omnis, aliquam perspiciatis dolorum dolor sunt totam harum, tempore debitis consequatur mollitia voluptate accusamus. Quo praesentium nobis fugiat consequuntur rem repellendus?</p>
         <div class="det">
@@ -289,13 +231,12 @@
         </div>
         </div>
      </section>
-     <!-- Comment-Area -->
-      <section id="comment">
+    <section id="comment">
         <div class="container2">
             <form action="https://www.w3schools.com/action_page.php">
               <div class="roww">
                 <div class="col-25">
-                  <label for="fname">First Name</label>
+                  <label for="fname" class="label">First Name</label>
                 </div>
                 <div class="col-75">
                   <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -303,7 +244,7 @@
               </div>
               <div class="roww">
                 <div class="col-25">
-                  <label for="lname">Email</label>
+                  <label for="lname" class="label">Email</label>
                 </div>
                 <div class="col-75">
                   <input type="text" id="lname" name="Email" placeholder="JerryKeyz016@gmail.com..">
@@ -311,7 +252,7 @@
               </div>
               <div class="roww">
                 <div class="col-25">
-                  <label for="comment">Comment:</label>
+                  <label for="comment" class="label">Comment:</label>
                 </div>
                 <div class="col-75">
                   <textarea id="subject" name="comment" placeholder="Comment here.." style="height:200px"></textarea>
@@ -322,11 +263,11 @@
               </div>
             </form>
           </div>
-      </section>
-      <!-- footer-area -->
-      <section id="footer">
-        <div class="container2">
-            <div class="container3">
+    </section>
+    <!-- footer-area -->
+    <section id="footer">
+        <div class="container3">
+            <div class="container4">
                 <div class="foot">
                 <h1>Contact Us</h1><br>
                 <p>198 West 21<sup>st</sup> Street, suite</p>
@@ -346,7 +287,7 @@
                     <i class="fab fa-youtube"></i>
                 </div>
             </div>
-            <div class="container4">
+            <div class="container5">
                 <div class="new">
                     <h1>Services</h1><br>
                     <p>New York</p><br>
@@ -361,7 +302,7 @@
                     <p>Nigeria</p><br>
                 </div>
             </div>
-            <div class="container5">
+            <div class="container6">
                 <div class="estra">
                     <h1>Extra</h1><br>
                     <p>About me</p><br>
@@ -383,6 +324,6 @@
         <p style="text-align: center;">This site is protected by  <a href="">ReCHAPCTA</a> and <a href="">google policy</a> terms and conditions apply</p>
         <p>Copyright <span><i class="fa fa-copyright"></i></span> 2024 All right reserved|This website is made with <span><i class="fa fa-heart"></i></span> by Ayomide </p>
     </section>
-    <script src="index.js"></script>
+    <script src='nav.js'></script>
 </body>
 </html>
